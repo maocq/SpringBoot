@@ -1,0 +1,12 @@
+<div class="card hoverable small">
+  <div class="card-image">
+    <img class="materialboxed" src="http://materializecss.com/images/sample-1.jpg">
+    <span class="card-title">{{user.name}}</span>
+  </div>
+  <div class="card-content">
+  <p>{{user.email}}</p>
+  <div style="float:right;">
+  	<a ng-href="#/users/{{user.ide}}/edit" class="btn-floating"><i class="material-icons">code</i></a>
+  	<button class="btn-floating" ng-click="userDetail.deleteUser(user.ide)"><i class="material-icons">delete</i></button>
+  </div>
+</div>

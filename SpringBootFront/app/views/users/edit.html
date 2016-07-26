@@ -1,0 +1,32 @@
+  <div class="container">
+     <div class="row">
+
+        <form  name="form" class="col s4 offset-s4">
+          <div class="row">
+            <div>
+              <label for="id">Id</label>            
+              <input id="id" disabled type="number" class="validate" ng-model="user.ide" required>
+            </div>
+          </div>        
+          <div class="row">
+            <div>
+              <label for="name">Nombre</label>
+              <input id="name" type="text" class="validate" ng-model="user.name" required>              
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="email">Email</label>          
+              <input id="email" type="email" class="validate" ng-model="user.email" required>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn-floating btn-large waves-effect waves-light red" ng-disabled="!form.$valid" ng-click="userEdit.update()">
+              <i class="material-icons">add</i>
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+  </div>

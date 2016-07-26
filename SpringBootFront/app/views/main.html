@@ -1,0 +1,32 @@
+<div class="row">
+  <article class="col s4 offset-s4">
+
+    <div class="progress" ng-show="preload">
+        <div class="indeterminate"></div>
+    </div>
+
+    <section ng-cloack>
+      <div ng-repeat="user in users | limitTo:5">
+          <div class="card-panel grey lighten-5 z-depth-1">
+            <a ng-href="#/users/{{user.ide}}">
+              <div class="row valign-wrapper">
+                <div class="col s4">
+                  <img ng-src="http://placehold.it/200x200" class="circle responsive-img">
+                </div>
+                <div class="col s8">
+                  <span class="black-text">
+                   {{user.name}}
+                  </span>
+                  <small style="display:block;">{{user.email}}</small>
+                </div>
+              </div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+<div class="fixed-action-btn">
+  <a ng-href="#/users-add" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+</div>
